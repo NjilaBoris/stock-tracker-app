@@ -14,7 +14,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <section className="auth-left-section scrollbar-hide-default">
         <Link href="/" className="auth-logo">
           <Image
-            src="/assets/icons/logo.svg"
+            src="/icons/logo.svg"
             alt="Signalist logo"
             width={140}
             height={32}
@@ -39,7 +39,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Image
-                  src="/assets/icons/star.svg"
+                  src="/icons/star.svg"
                   alt="Star"
                   key={star}
                   width={20}
@@ -53,7 +53,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
 
         <div className="flex-1 relative">
           <Image
-            src="/assets/images/dashboard.png"
+            src="/images/dashboard.png"
             alt="Dashboard Preview"
             width={1440}
             height={1150}
