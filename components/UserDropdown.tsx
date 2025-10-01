@@ -10,23 +10,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useRouter } from "next/navigation";
-import NavItems from "./NavItems";
+import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
-import { Button } from "./ui/button";
+import NavItems from "@/components/NavItems";
+import { signOut } from "@/lib/actions/auth.actions";
 
 const UserDropdown = ({
-  //   user,
+  user,
   initialStocks,
 }: {
-  //   user: User;
+  user: User;
   initialStocks: StockWithWatchlistStatus[];
 }) => {
   const router = useRouter();
+
   const handleSignOut = async () => {
-    // await signOut();
+    await signOut();
     router.push("/sign-in");
   };
-  const user = { name: "John", email: "johndoe@example.com" };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -80,5 +82,4 @@ const UserDropdown = ({
     </DropdownMenu>
   );
 };
-
 export default UserDropdown;
