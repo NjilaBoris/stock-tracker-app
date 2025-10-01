@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import React from "react";
+import SearchCommand from "./SearchCommand";
 
 const NavItems = ({
   initialStocks,
@@ -23,11 +24,11 @@ const NavItems = ({
         if (href === "/search")
           return (
             <li key="search-trigger">
-              {/* <SearchCommand
-                            renderAs="text"
-                            label="Search"
-                            initialStocks={initialStocks}
-                        /> */}
+              <SearchCommand
+                renderAs="text"
+                label="Search"
+                initialStocks={initialStocks}
+              />
             </li>
           );
 
